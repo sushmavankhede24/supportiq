@@ -53,12 +53,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
-##Swagger UI:
+## 📘 Swagger UI:
 ```bash
 http://localhost:8000/docs
 ```
 
-##📦 Running with Docker
+## 📦 Running with Docker
 
 ```bash
 cd inference-service
@@ -66,7 +66,7 @@ docker build -t supportiq-inference .
 docker run -p 8000:8000 supportiq-inference
 ```
 
-##🧪 Testing
+## 🧪 Testing
 
 Automated tests are written using pytest and FastAPI’s TestClient.
 
@@ -77,16 +77,16 @@ pytest
 
 Tests are:
 
--Deterministic
--Cost-free (AI calls are mocked)
--CI/CD safe
+- Deterministic
+- Cost-free (AI calls are mocked)
+- CI/CD safe
 
-##📌 Project Status
+## 📌 Project Status
 
-✅ Inference Service complete (Dockerized, tested, linted)
-🔄 Gateway Service in progress
-🔜 Intent & Memory services planned
-🔜 CI/CD and Azure deployment planned
+- ✅ Inference Service complete (Dockerized, tested, linted)
+- 🔄 Gateway Service in progress
+- 🔜 Intent & Memory services planned
+- 🔜 CI/CD and Azure deployment planned
 
 ## 📄 License
 
