@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+requests
+pytest
+httpx
+black
+isort
+flake8
+mypy
