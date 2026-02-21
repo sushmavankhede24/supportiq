@@ -5,8 +5,17 @@ SupportIQ is a **production-grade, microservices-based AI customer support syste
 The project emphasizes **clean service boundaries, cost-aware AI usage, automated testing, containerization, and CI/CD-friendly design**.
 
 ---
+## Architecture Overview
 
-## 🧠 High-Level Architecture
+- FastAPI-based microservices architecture  
+- Dockerized services for consistent deployment  
+- RESTful inter-service communication  
+- Background task handling for async workloads  
+- Independently deployable and testable services
+  
+---
+
+## High-Level Architecture
 
 SupportIQ is designed as a set of independent, loosely coupled microservices:
 
@@ -30,7 +39,7 @@ Each service is:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Python, FastAPI  
 - **AI / LLM:** Mock LLM, Hugging Face Inference API (pluggable design)  
@@ -42,7 +51,7 @@ Each service is:
 
 ---
 
-## 🚀 Running a Service Locally
+## Running a Service Locally
 
 Example: **Inference Service**
 
@@ -53,12 +62,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
-## 📘 Swagger UI:
+## Swagger UI:
 ```bash
 http://localhost:8000/docs
 ```
 
-## 📦 Running with Docker
+## Running with Docker
 
 ```bash
 cd inference-service
@@ -66,7 +75,7 @@ docker build -t supportiq-inference .
 docker run -p 8000:8000 supportiq-inference
 ```
 
-## 🧪 Testing
+## Testing
 
 Automated tests are written using pytest and FastAPI’s TestClient.
 
@@ -81,13 +90,13 @@ Tests are:
 - Cost-free (AI calls are mocked)
 - CI/CD safe
 
-## 📌 Project Status
+## Project Status
 
-- ✅ Inference Service complete (Dockerized, tested, linted)
-- 🔄 Gateway Service in progress
-- 🔜 Intent & Memory services planned
-- 🔜 CI/CD and Azure deployment planned
+-  Inference Service complete (Dockerized, tested, linted) 
+-  Gateway Service in progress
+-  Intent & Memory services planned
+-  CI/CD and Azure deployment planned
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License and is intended for learning, demonstration, and portfolio use.
